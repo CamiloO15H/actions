@@ -11,3 +11,10 @@ jobs: #Ejecutar todo lo que necesitemos dentro de un servidor, actions provee va
               uses: actions/checkout@v2 #Accion que se ejecuta, en este caso se hace un checkout del código
             - name: Run script #Nombre del paso
               run: echo "Hola Mundo" #Comando que se ejecuta, en este caso se imprime "Hola Mundo"
+    
+    other: #Nombre del job
+        runs-on: ubuntu-latest #Sistema operativo en el que se ejecuta el job
+        
+        steps: #Pasos a seguir dentro del job
+            - name: LS #Nombre del paso
+              run: ls -al #Comando que se ejecuta, en este caso se imprime "Hola Mundo"
