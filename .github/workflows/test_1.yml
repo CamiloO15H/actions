@@ -20,7 +20,7 @@ jobs: #Ejecutar todo lo que necesitemos dentro de un servidor, actions provee va
               run: echo "Hola Mundo" >> test.txt #Comando que se ejecuta, en este caso se imprime "Hola Mundo" en el archivo de texto
 
             - name: Read file
-              run: cat hola.txt #Comando que se ejecuta, en este caso se imprime el contenido del archivo de texto
+              run: cat test.txt #Comando que se ejecuta, en este caso se imprime el contenido del archivo de texto
     
     other: #Nombre del job
         runs-on: ubuntu-latest #Sistema operativo en el que se ejecuta el job
