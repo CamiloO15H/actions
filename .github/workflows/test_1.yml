@@ -2,7 +2,7 @@ name: Hola Mundo #Nombre representativo del workflow
 
 on: [push, pull_request] # Evento que activa el workflow, en este caso se activa al hacer un push o pull request
 
-jobs #Ejecutar todo lo que necesitemos dentro de un servidor, actions provee varios servidores.
+jobs: #Ejecutar todo lo que necesitemos dentro de un servidor, actions provee varios servidores.
     hola: #Nombre del job
         runs-on: ubuntu-latest #Sistema operativo en el que se ejecuta el job
         
