@@ -1,6 +1,13 @@
 name: Hola Mundo #Nombre representativo del workflow 
 
-on: [push, pull_request] # Evento que activa el workflow, en este caso se activa al hacer un push o pull request
+on:
+    push: #Evento que activa el workflow, en este caso un push a la rama main
+        branches:
+            - master #Rama que activa el workflow
+
+    pull_request: #Evento que activa el workflow, en este caso un pull request a la rama main
+        branches:
+            - master #Rama que activa el workflow
 
 jobs: #Ejecutar todo lo que necesitemos dentro de un servidor, actions provee varios servidores.
     hola: #Nombre del job
