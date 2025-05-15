@@ -24,7 +24,7 @@ jobs: #Ejecutar todo lo que necesitemos dentro de un servidor, actions provee va
     
     other: #Nombre del job
         runs-on: ubuntu-latest #Sistema operativo en el que se ejecuta el job
-        
+        needs: [hola] #El job necesita que el job "hola" se ejecute antes de ejecutarse este job
         steps: #Pasos a seguir dentro del job
             - name: LS #Nombre del paso
               run: ls -al #Comando que se ejecuta, en este caso se imprime "Hola Mundo"
