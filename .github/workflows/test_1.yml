@@ -9,8 +9,18 @@ jobs: #Ejecutar todo lo que necesitemos dentro de un servidor, actions provee va
         steps: #Pasos a seguir dentro del job
             - name: Checkout code #Nombre del paso
               uses: actions/checkout@v2 #Accion que se ejecuta, en este caso se hace un checkout del código
+
             - name: Run script #Nombre del paso
               run: echo "Hola Mundo" #Comando que se ejecuta, en este caso se imprime "Hola Mundo"
+
+            - name: touch file
+              run: touch test.txt #Comando que se ejecuta, en este caso se crea un archivo de texto
+            
+            - name: Set Text
+              run: echo "Hola Mundo" >> test.txt #Comando que se ejecuta, en este caso se imprime "Hola Mundo" en el archivo de texto
+
+            - name: Read file
+              run: cat hola.txt #Comando que se ejecuta, en este caso se imprime el contenido del archivo de texto
     
     other: #Nombre del job
         runs-on: ubuntu-latest #Sistema operativo en el que se ejecuta el job
