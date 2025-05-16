@@ -7,7 +7,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+
         - name: ls
-          run: | #pip 
-            echo "hola Mundo" >> test.txt
-            cat test.txt
+          run: | #pip para generar strings multilineas
+            chmod +x script.sh
+            ./
