@@ -33,8 +33,8 @@ jobs: #Ejecutar todo lo que necesitemos dentro de un servidor, actions provee va
         runs-on: ubuntu-latest #Sistema operativo en el que se ejecuta el job
         needs: [hola] #El job necesita que el job "hola" se ejecute antes de ejecutarse este job
         steps: #Pasos a seguir dentro del job
-        - name: Checkout
-          uses: actions/checkout@v4.2.2
+        - name: Checkout #Nombre del paso
+          uses: actions/checkout@v4.2.2 #Accion que se ejecuta, en este caso se hace un checkout del código
         - name: LS #Nombre del paso
           run: ls -al #Comando que se ejecuta, en este caso se imprime "Hola Mundo"
 
